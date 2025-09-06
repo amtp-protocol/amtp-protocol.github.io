@@ -1,0 +1,43 @@
+# GitHub Pages configuration for AMTP Protocol website
+title: "AMTP Protocol - Agent Message Transfer Protocol"
+description: "Federated, asynchronous communication protocol for reliable agent-to-agent communication across organizational boundaries"
+url: "https://amtp-protocol.org"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# SEO settings
+author: "AMTP Protocol Community"
+twitter:
+  username: amtp_protocol
+  card: summary_large_image
+
+# Social links
+github_username: amtp-protocol
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Include files
+include:
+  - _pages
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/

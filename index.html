@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMTP Protocol - Agent Message Transfer Protocol</title>
+    <meta name="description" content="AMTP is a federated, asynchronous communication protocol designed for reliable agent-to-agent communication across organizational boundaries.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="amtp.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="amtp.png" alt="AMTP Logo" class="logo">
+                    <span class="logo-text">AMTP Protocol</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#architecture">Architecture</a></li>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <img src="amtp.png" alt="AMTP Logo" class="hero-logo">
+                    <h1>Agent Message Transfer Protocol</h1>
+                    <p class="hero-subtitle">Federated, asynchronous communication protocol for reliable agent-to-agent communication across organizational boundaries</p>
+                    <div class="hero-buttons">
+                        <a href="https://github.com/amtp-protocol/amtp" class="btn btn-primary">View Protocol Specification</a>
+                        <a href="https://github.com/amtp-protocol/agentry" class="btn btn-secondary">Gateway Implementation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview" class="section">
+            <div class="container">
+                <h2>Protocol Overview</h2>
+                <p>The Agent Message Transfer Protocol (AMTP) extends the familiar email addressing model with native support for structured data, multi-agent coordination, and guaranteed delivery semantics. Built for the age of AI agents, AMTP provides a standardized way for autonomous systems to communicate reliably across organizational boundaries.</p>
+                
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <h3>Universal Addressing</h3>
+                        <p>Uses familiar <code>agent@domain</code> format, making it intuitive for developers and compatible with existing infrastructure.</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Federated Architecture</h3>
+                        <p>Decentralized design with DNS-based discovery enables secure communication between organizations without central authority.</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Structured Data</h3>
+                        <p>Native JSON payloads with optional schema validation ensure reliable data exchange between different agent implementations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section section-alt">
+            <div class="container">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Universal Addressing</h3>
+                        <p>Standard <code>agent@domain</code> format for intuitive and familiar addressing</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Protocol Upgrade</h3>
+                        <p>Transparent protocol upgrade with automatic email fallback for compatibility</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✅</div>
+                        <h3>Delivery Guarantees</h3>
+                        <p>At-least-once delivery with idempotency guarantees and retry logic</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>Schema Integration</h3>
+                        <p>Standard schema integration via AGNTCY framework for payload validation</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Multi-Agent Coordination</h3>
+                        <p>Built-in support for parallel, sequential, and conditional workflow patterns</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏗️</div>
+                        <h3>Federated Architecture</h3>
+                        <p>DNS-based discovery enables decentralized communication without central authority</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="section">
+            <div class="container">
+                <h2>Architecture</h2>
+                <div class="architecture-content">
+                    <div class="architecture-text">
+                        <h3>Protocol Stack</h3>
+                        <p>AMTP is built on standard internet protocols, ensuring reliability and compatibility:</p>
+                        <ul>
+                            <li><strong>Application Layer:</strong> Agent Logic</li>
+                            <li><strong>AMTP Protocol:</strong> Message Format & Coordination</li>
+                            <li><strong>Transport Layer:</strong> HTTPS for Reliable Delivery</li>
+                            <li><strong>Discovery Layer:</strong> DNS for Addressing & Capabilities</li>
+                            <li><strong>Network Layer:</strong> Standard Internet (IP)</li>
+                        </ul>
+                    </div>
+                    <div class="architecture-diagram">
+                        <div class="diagram-box">
+                            <div class="layer">Application Layer</div>
+                            <div class="layer">AMTP Protocol</div>
+                            <div class="layer">Transport Layer (HTTPS)</div>
+                            <div class="layer">Discovery Layer (DNS)</div>
+                            <div class="layer">Network Layer (IP)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="system-components">
+                    <h3>System Components</h3>
+                    <p>AMTP uses a federated gateway architecture where each domain operates its own gateway:</p>
+                    <div class="components-flow">
+                        <div class="component">Agent A<br><small>(sender.com)</small></div>
+                        <div class="arrow">→</div>
+                        <div class="component">AMTP Gateway<br><small>(sender.com)</small></div>
+                        <div class="arrow">→</div>
+                        <div class="component">AMTP Gateway<br><small>(receiver.com)</small></div>
+                        <div class="arrow">→</div>
+                        <div class="component">Agent B<br><small>(receiver.com)</small></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="getting-started" class="section section-alt">
+            <div class="container">
+                <h2>Getting Started</h2>
+                <div class="getting-started-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Read the Specification</h3>
+                        <p>Start by understanding the AMTP protocol specification, including message formats, addressing, and coordination patterns.</p>
+                        <a href="https://github.com/amtp-protocol/amtp" class="btn btn-outline">Protocol Spec</a>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Deploy a Gateway</h3>
+                        <p>Set up an AMTP gateway for your domain using the reference implementation or build your own.</p>
+                        <a href="https://github.com/amtp-protocol/agentry" class="btn btn-outline">Gateway Implementation</a>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Configure DNS</h3>
+                        <p>Add DNS TXT records to advertise your AMTP capabilities and enable discovery by other domains.</p>
+                        <code class="dns-example">_amtp.yourdomain.com. IN TXT "v=amtp1;gateway=https://amtp.yourdomain.com"</code>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Integrate Agents</h3>
+                        <p>Connect your AI agents to the gateway using the REST API or SDK libraries for seamless communication.</p>
+                        <div class="code-example">
+                            <pre><code>agent.send_message(
+  recipients=["partner@example.com"],
+  subject="Order Confirmation",
+  payload={"order_id": "12345"}
+)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="section">
+            <div class="container">
+                <h2>Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>📖 Protocol Specification</h3>
+                        <p>Complete technical specification including message formats, coordination patterns, and implementation guidelines.</p>
+                        <a href="https://github.com/amtp-protocol/amtp" class="resource-link">View on GitHub →</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>🚀 Gateway Implementation</h3>
+                        <p>Reference implementation of an AMTP gateway with deployment guides and configuration examples.</p>
+                        <a href="https://github.com/amtp-protocol/agentry" class="resource-link">View on GitHub →</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>🔧 Integration Examples</h3>
+                        <p>Code examples and integration patterns for connecting agents to AMTP gateways.</p>
+                        <a href="https://github.com/amtp-protocol/amtp#appendix-c-implementation-guidelines" class="resource-link">View Examples →</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>📋 Schema Framework</h3>
+                        <p>Learn about AGNTCY schema integration for structured data validation and semantic interoperability.</p>
+                        <a href="https://github.com/amtp-protocol/amtp#6-schema-framework-integration" class="resource-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="amtp.png" alt="AMTP Logo" class="footer-logo">
+                    <p>Agent Message Transfer Protocol</p>
+                    <p class="footer-subtitle">Federated communication for AI agents</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Protocol</h4>
+                    <ul>
+                        <li><a href="https://github.com/amtp-protocol/amtp">Specification</a></li>
+                        <li><a href="https://github.com/amtp-protocol/amtp#appendix-a-message-examples">Examples</a></li>
+                        <li><a href="https://github.com/amtp-protocol/amtp#14-compliance-and-conformance">Conformance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Implementation</h4>
+                    <ul>
+                        <li><a href="https://github.com/amtp-protocol/agentry">Gateway</a></li>
+                        <li><a href="https://github.com/amtp-protocol/amtp#appendix-c-implementation-guidelines">Guidelines</a></li>
+                        <li><a href="https://github.com/amtp-protocol/amtp#appendix-d-performance-tuning">Performance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/amtp-protocol">GitHub Organization</a></li>
+                        <li><a href="https://github.com/amtp-protocol/amtp/issues">Issues</a></li>
+                        <li><a href="https://github.com/amtp-protocol/amtp/discussions">Discussions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AMTP Protocol. Licensed under CC0-1.0.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
