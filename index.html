@@ -21,7 +21,9 @@
                     <li><a href="#features">Features</a></li>
                     <li><a href="#architecture">Architecture</a></li>
                     <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#resources">Resources</a></li>
+                    <li><a href="https://discord.gg/3bYcY7Af" class="discord-link">Discord</a></li>
                 </ul>
                 <div class="hamburger">
                     <span></span>
@@ -187,6 +189,44 @@
             </div>
         </section>
 
+        <section id="faq" class="section section-alt">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h3 class="faq-question">Why not MCP (Model Context Protocol)?</h3>
+                        <div class="faq-answer">
+                            <p>MCP is designed as a client-server interface for LLMs to access tools, data, and prompts. It solves the model–tool wiring problem. In short: MCP integrates "inside" an app; AMTP connects agents "across" organizations.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Why not A2A (Agent-to-Agent Protocol)?</h3>
+                        <div class="faq-answer">
+                            <p>A2A's design centers on JSON "Agent Cards" and task lifecycle APIs for enterprise collaboration. It assumes structured discovery and long-running tasks. AMTP instead adopts an email-like design: DNS TXT for discovery, simple agent@domain addressing, and gateways for reliability. This keeps AMTP lightweight, federated, and compatible with existing internet infrastructure.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Why not ANP (Agent Network Protocol)?</h3>
+                        <div class="faq-answer">
+                            <p>ANP aims to be the "HTTP of the Agentic Web" with decentralized identity and negotiation. This is powerful but heavy. AMTP deliberately reuses existing Internet primitives (DNS, HTTPS, SMTP fallback) and separates schema from transport. Its design favors gradual adoption and operational simplicity while still enabling structured data and coordination when needed.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Why not ACP (Agent Connect Protocol)?</h3>
+                        <div class="faq-answer">
+                            <p>ACP, from Cisco's AGNTCY initiative, is workflow- and REST-centric, with directories and schema documents. AMTP is asynchronous-first, federated by design, and does not require central directories—agents are addressable directly through DNS and discoverable at the domain level.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Why not ACP (Agent Communication Protocol by IBM)?</h3>
+                        <div class="faq-answer">
+                            <p>IBM's ACP standardizes peer-to-peer APIs under Linux Foundation governance, emphasizing vendor neutrality. AMTP complements this by focusing on reliable, federated delivery across domains, SMTP fallback, and multi-agent workflow coordination—capabilities not covered by API-level specs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="resources" class="section">
             <div class="container">
                 <h2>Resources</h2>
@@ -243,6 +283,7 @@
                 <div class="footer-section">
                     <h4>Community</h4>
                     <ul>
+                        <li><a href="https://discord.gg/3bYcY7Af">Discord Community</a></li>
                         <li><a href="https://github.com/amtp-protocol">GitHub Organization</a></li>
                         <li><a href="https://github.com/amtp-protocol/amtp/issues">Issues</a></li>
                         <li><a href="https://github.com/amtp-protocol/amtp/discussions">Discussions</a></li>
