@@ -194,6 +194,24 @@
                 <h2>Frequently Asked Questions</h2>
                 <div class="faq-container">
                     <div class="faq-item">
+                        <h3 class="faq-question">Is AMTP only for AI agents?</h3>
+                        <div class="faq-answer">
+                            <p>No. AMTP is designed for any autonomous or semi-autonomous software entity that needs reliable, federated communication. While AI agents are the primary driver, the protocol equally supports traditional services, workflows, and system integrations that benefit from asynchronous, cross-domain messaging, like email-based automation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Why not just extend email (SMTP)?</h3>
+                        <div class="faq-answer">
+                            <p>SMTP was built for humans, not agents. It lacks structured payloads, workflow semantics, strong delivery guarantees, and modern security. AMTP keeps email's federation model but adds reliability, schema support, and multi-agent coordination.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Can AMTP also be used for intra-org?</h3>
+                        <div class="faq-answer">
+                            <p>Yes. Although AMTP is designed for cross-organization federation, the same features—reliable delivery, schema validation, and workflow coordination—work equally well inside a single organization. AMTP gateways can be deployed internally to unify messaging across business units or systems, while still benefiting from the same durability and discovery mechanisms.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
                         <h3 class="faq-question">Why not MCP (Model Context Protocol)?</h3>
                         <div class="faq-answer">
                             <p>MCP is designed as a client-server interface for LLMs to access tools, data, and prompts. It solves the model–tool wiring problem. In short: MCP integrates "inside" an app; AMTP connects agents "across" organizations.</p>
@@ -203,6 +221,12 @@
                         <h3 class="faq-question">Why not A2A (Agent-to-Agent Protocol)?</h3>
                         <div class="faq-answer">
                             <p>A2A's design centers on JSON "Agent Cards" and task lifecycle APIs for enterprise collaboration. It assumes structured discovery and long-running tasks. AMTP instead adopts an email-like design: DNS TXT for discovery, simple agent@domain addressing, and gateways for reliability. This keeps AMTP lightweight, federated, and compatible with existing internet infrastructure.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Why not just extend A2A for cross-org use?</h3>
+                        <div class="faq-answer">
+                            <p>A2A was designed for direct, RPC-style interactions within trusted ecosystems. Extending it across organizations introduces problems: unreliable availability, heavy state exposure, and complex onboarding.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -221,12 +245,6 @@
                         <h3 class="faq-question">Why not ACP (Agent Communication Protocol)?</h3>
                         <div class="faq-answer">
                             <p>IBM's ACP standardizes peer-to-peer APIs under Linux Foundation governance, emphasizing vendor neutrality. AMTP complements this by focusing on reliable, federated delivery across domains, SMTP fallback, and multi-agent workflow coordination—capabilities not covered by API-level specs.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <h3 class="faq-question">Is AMTP only for AI agents?</h3>
-                        <div class="faq-answer">
-                            <p>No. AMTP is designed for any autonomous or semi-autonomous software entity that needs reliable, federated communication. While AI agents are the primary driver, the protocol equally supports traditional services, workflows, and system integrations that benefit from asynchronous, cross-domain messaging, like email-based automation.</p>
                         </div>
                     </div>
                 </div>
