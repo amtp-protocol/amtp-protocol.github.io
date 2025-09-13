@@ -44,6 +44,7 @@
                     <div class="hero-buttons">
                         <a href="https://github.com/amtp-protocol/amtp" class="btn btn-primary">View Protocol Specification</a>
                         <a href="https://github.com/amtp-protocol/agentry" class="btn btn-secondary">Gateway Implementation</a>
+                        <a href="https://github.com/amtp-protocol/amtp-python-sdk" class="btn btn-secondary">Python SDK</a>
                     </div>
                 </div>
             </div>
@@ -176,14 +177,16 @@
                     <div class="step-card">
                         <div class="step-number">4</div>
                         <h3>Integrate Agents</h3>
-                        <p>Connect your AI agents to the gateway using the REST API or SDK libraries for seamless communication.</p>
+                        <p>Connect your AI agents to the gateway using SDK. Get started quickly with our Python SDK for rapid development.</p>
                         <div class="code-example">
-                            <pre><code>agent.send_message(
-  recipients=["partner@example.com"],
+                            <pre><code>AMTP.send(Message(
+  recipients=["agent@example.com"],
   subject="Order Confirmation",
   payload={"order_id": "12345"}
+))
 )</code></pre>
                         </div>
+                        <a href="https://github.com/amtp-protocol/amtp-python-sdk" class="btn btn-outline">Python SDK</a>
                     </div>
                 </div>
             </div>
@@ -266,9 +269,14 @@
                         <a href="https://github.com/amtp-protocol/agentry" class="resource-link">View on GitHub →</a>
                     </div>
                     <div class="resource-card">
+                        <h3>🐍 Python SDK</h3>
+                        <p>Python SDK for building agents with AMTP. Includes async support, schema validation, and comprehensive examples.</p>
+                        <a href="https://github.com/amtp-protocol/amtp-python-sdk" class="resource-link">View on GitHub →</a>
+                    </div>
+                    <div class="resource-card">
                         <h3>🔧 Integration Examples</h3>
                         <p>Code examples and integration patterns for connecting agents to AMTP gateways.</p>
-                        <a href="https://github.com/amtp-protocol/amtp#appendix-c-implementation-guidelines" class="resource-link">View Examples →</a>
+                        <a href="https://github.com/amtp-protocol/amtp-python-sdk/tree/main/examples" class="resource-link">View Examples →</a>
                     </div>
                     <div class="resource-card">
                         <h3>📋 Schema Framework</h3>
@@ -300,8 +308,8 @@
                     <h4>Implementation</h4>
                     <ul>
                         <li><a href="https://github.com/amtp-protocol/agentry">Gateway</a></li>
+                        <li><a href="https://github.com/amtp-protocol/amtp-python-sdk">Python SDK</a></li>
                         <li><a href="https://github.com/amtp-protocol/amtp#appendix-c-implementation-guidelines">Guidelines</a></li>
-                        <li><a href="https://github.com/amtp-protocol/amtp#appendix-d-performance-tuning">Performance</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
