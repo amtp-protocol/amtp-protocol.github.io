@@ -208,6 +208,12 @@
                         </div>
                     </div>
                     <div class="faq-item">
+                        <h3 class="faq-question">Why not build HTTP APIs on top of SMTP?</h3>
+                        <div class="faq-answer">
+                            <p>Building HTTP APIs "on top of SMTP" is architecturally problematic—it's like sending REST calls as email attachments. While technically feasible, this approach inherits all of SMTP's limitations: high latency, weak delivery semantics, inadequate authentication mechanisms, and opaque transport characteristics that obscure error handling and debugging.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
                         <h3 class="faq-question">Can AMTP also be used for intra-org?</h3>
                         <div class="faq-answer">
                             <p>Yes. Although AMTP is designed for cross-organization federation, the same features—reliable delivery, schema validation, and workflow coordination—work equally well inside a single organization. AMTP gateways can be deployed internally to unify messaging across business units or systems, while still benefiting from the same durability and discovery mechanisms.</p>
@@ -247,12 +253,6 @@
                         <h3 class="faq-question">Why not ACP (Agent Communication Protocol)?</h3>
                         <div class="faq-answer">
                             <p>IBM's ACP standardizes peer-to-peer APIs under Linux Foundation governance, emphasizing vendor neutrality. AMTP complements this by focusing on reliable, federated delivery across domains, SMTP bridging, and multi-agent workflow coordination—capabilities not covered by API-level specs.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <h3 class="faq-question">Why not build HTTP APIs on top of SMTP?</h3>
-                        <div class="faq-answer">
-                            <p>Building HTTP APIs "on top of SMTP" is architecturally problematic—it's like sending REST calls as email attachments. While technically feasible, this approach inherits all of SMTP's limitations: high latency, weak delivery semantics, inadequate authentication mechanisms, and opaque transport characteristics that obscure error handling and debugging.</p>
                         </div>
                     </div>
                 </div>
