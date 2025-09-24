@@ -84,7 +84,7 @@
                     <div class="feature-card">
                         <div class="feature-icon">🔄</div>
                         <h3>Protocol Upgrade</h3>
-                        <p>Transparent protocol upgrade with automatic email fallback for compatibility</p>
+                        <p>Transparent protocol upgrade with bridging email transparently</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">✅</div>
@@ -234,7 +234,7 @@
                     <div class="faq-item">
                         <h3 class="faq-question">Why not ANP (Agent Network Protocol)?</h3>
                         <div class="faq-answer">
-                            <p>ANP aims to be the "HTTP of the Agentic Web" with decentralized identity and negotiation. This is powerful but heavy. AMTP deliberately reuses existing Internet primitives (DNS, HTTPS, SMTP fallback) and separates schema from transport. Its design favors gradual adoption and operational simplicity while still enabling structured data and coordination when needed.</p>
+                            <p>ANP aims to be the "HTTP of the Agentic Web" with decentralized identity and negotiation. This is powerful but heavy. AMTP deliberately reuses existing Internet primitives (DNS, HTTPS, SMTP bridging) and separates schema from transport. Its design favors gradual adoption and operational simplicity while still enabling structured data and coordination when needed.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -246,7 +246,13 @@
                     <div class="faq-item">
                         <h3 class="faq-question">Why not ACP (Agent Communication Protocol)?</h3>
                         <div class="faq-answer">
-                            <p>IBM's ACP standardizes peer-to-peer APIs under Linux Foundation governance, emphasizing vendor neutrality. AMTP complements this by focusing on reliable, federated delivery across domains, SMTP fallback, and multi-agent workflow coordination—capabilities not covered by API-level specs.</p>
+                            <p>IBM's ACP standardizes peer-to-peer APIs under Linux Foundation governance, emphasizing vendor neutrality. AMTP complements this by focusing on reliable, federated delivery across domains, SMTP bridging, and multi-agent workflow coordination—capabilities not covered by API-level specs.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Why not build HTTP APIs on top of SMTP?</h3>
+                        <div class="faq-answer">
+                            <p>Building HTTP APIs "on top of SMTP" is architecturally problematic—it's like sending REST calls as email attachments. While technically feasible, this approach inherits all of SMTP's limitations: high latency, weak delivery semantics, inadequate authentication mechanisms, and opaque transport characteristics that obscure error handling and debugging.</p>
                         </div>
                     </div>
                 </div>
